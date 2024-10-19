@@ -43,8 +43,8 @@ ENV PATH="/opt/ct-ng/bin:${PATH}" \
     RANLIB="${FFBUILD_TOOLCHAIN}-gcc-ranlib" \
     NM="${FFBUILD_TOOLCHAIN}-gcc-nm" \
     DLLTOOL="${FFBUILD_TOOLCHAIN}-dlltool" \
-    CFLAGS="-static-libgcc -static-libstdc++ -I/opt/ffbuild/include -O2 -pipe -D_FORTIFY_SOURCE=2 -fstack-protector-strong" \
-    CXXFLAGS="-static-libgcc -static-libstdc++ -I/opt/ffbuild/include -O2 -pipe -D_FORTIFY_SOURCE=2 -fstack-protector-strong" \
-    LDFLAGS="-static-libgcc -static-libstdc++ -L/opt/ffbuild/lib -O2 -pipe -fstack-protector-strong" \
-    STAGE_CFLAGS="-fno-semantic-interposition" \
-    STAGE_CXXFLAGS="-fno-semantic-interposition"
+    CFLAGS="-static-libgcc -static-libstdc++ -I/opt/ffbuild/include -O3 -pipe -march=x86-64-v3 -D_FORTIFY_SOURCE=2 -fstack-protector-strong" \
+    CXXFLAGS="-static-libgcc -static-libstdc++ -I/opt/ffbuild/include -O3 -pipe -march=x86-64-v3 -D_FORTIFY_SOURCE=2 -fstack-protector-strong" \
+    LDFLAGS="-static-libgcc -static-libstdc++ -L/opt/ffbuild/lib -O3 -pipe -march=x86-64-v3 -fstack-protector-strong" \
+    STAGE_CFLAGS="-O3 -pipe -march=x86-64-v3 -fno-semantic-interposition" \
+    STAGE_CXXFLAGS="-O3 -pipe -march=x86-64-v3 -fno-semantic-interposition"
